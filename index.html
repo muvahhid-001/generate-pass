@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generate</title>
+    <style>
+      body {
+        background-color: rgb(0, 157, 255);
+      }
+      .container {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 8px;
+        box-shadow: 0px 0px 20px black;
+        padding: 5px 15px;
+        width: 300px;
+        margin-top: 200px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        text-align: center;
+        height: 400px;
+        background-color: rgb(16, 17, 87);
+      }
+      .head-text {
+        margin-top: 30px;
+        font-size: clamp(1vw, 8vw, 30px);
+      }
+      .generate-bt {
+        all: unset;
+        transition: 0.3s;
+        margin-top: 20px;
+        border: 3.5px solid rgb(16, 44, 87);
+        background-color: rgb(20, 22, 108);
+        width: 200px;
+        height: 50px;
+      }
+      .generate-bt:hover {
+        transition: 0.3s;
+        font-size: 16.1px;
+        background-color: rgb(16, 19, 151);
+      }
+      .password-text {
+        margin-top: 50px;
+        font-weight: 100;
+        font-size: 20px;
+        padding: 5px 0px;
+        border: 2px solid white;
+        width: 180px;
+      }
+      #slider {
+        margin-top: 40px;
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <div class="container">
+        <h1 class="head-text">Генератор пароля</h1>
+        <input type="range" id="slider" min="3" max="12" value="6" />
+        <p>Текущее число: <span id="number" class="number">6</span></p>
+        <h2 class="password-text">--------</h2>
+        <button class="generate-bt">GENERATE</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
